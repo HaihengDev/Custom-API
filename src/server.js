@@ -3,11 +3,13 @@ import { createServer } from 'http';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
+import productRoute from './routes/productRoute.js';
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
+app.use('/api/products', productRoute);
 
 connectDB().then(() => {
   const server = createServer(app);

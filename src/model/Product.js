@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema({
   code: {
-    type: String,
+    type: Number,
     required: true,
   },
   name: {
@@ -16,6 +16,9 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
+  },
+  image: {
+    type: Array,
   }
 }, {timestamps: true, collection: 'products'});
 
