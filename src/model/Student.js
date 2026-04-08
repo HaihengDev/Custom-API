@@ -27,6 +27,6 @@ const studentSchema = new mongoose.Schema({
     max: 100,
     default: 0,
   }
-});
+}, {timestamps: true, collection: 'students'});
 
 export default mongoose.models.Student || mongoose.model('Student', studentSchema);
