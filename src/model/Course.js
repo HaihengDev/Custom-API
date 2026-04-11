@@ -18,4 +18,6 @@ export const courseSchema = new mongoose.Schema({
   rating: {
     type: Number,
   }
-})
+}, {collection: 'courses'});
+
+export default mongoose.models.Course || mongoose.model('Course', courseSchema);
