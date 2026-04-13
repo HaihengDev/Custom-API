@@ -20,6 +20,12 @@ export const courseSchema = new mongoose.Schema({
   },
   image: {
     type: String,
+  },
+  price: {
+    type: Number,
+  },
+  isFree: {
+    type: Boolean,
   }
 }, {collection: 'courses'});
 
