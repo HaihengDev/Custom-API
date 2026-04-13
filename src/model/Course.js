@@ -17,6 +17,9 @@ export const courseSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
+  },
+  image: {
+    type: String,
   }
 }, {collection: 'courses'});
 
